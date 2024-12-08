@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Copy, ExternalLink } from 'lucide-react';
-import { getUrls, incrementClicks } from '../utils/storage';
-import { UrlData } from '../types/url';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Copy, ExternalLink } from "lucide-react";
+import { getUrls, incrementClicks } from "../utils/storage";
+import { UrlData } from "../types/url";
 
 export default function UrlList() {
   const [urls, setUrls] = React.useState<UrlData[]>([]);
@@ -17,7 +17,9 @@ export default function UrlList() {
   }, []);
 
   const handleCopy = async (shortUrl: string, id: string) => {
-    await navigator.clipboard.writeText(`${window.location.origin}/${shortUrl}`);
+    await navigator.clipboard.writeText(
+      `${window.location.origin}/${shortUrl}`
+    );
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2000);
   };
@@ -40,14 +42,16 @@ export default function UrlList() {
           >
             <div className="flex items-center justify-between">
               <div className="flex-1 min-w-0">
-                <p className="text-sm text-gray-500 truncate">{url.originalUrl}</p>
+                <p className="text-sm text-gray-500 truncate">
+                  {url.originalUrl}
+                </p>
                 <div className="flex items-center mt-1">
                   <a
-                    href={`/${url.shortUrl}`}
+                    href={`#/${url.shortUrl}`} target="_blank"
                     onClick={() => handleClick(url.id)}
                     className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
                   >
-                    {window.location.origin}/{url.shortUrl}
+                    {window.location.origin}/#/{url.shortUrl}
                     <ExternalLink className="h-4 w-4 ml-1" />
                   </a>
                 </div>

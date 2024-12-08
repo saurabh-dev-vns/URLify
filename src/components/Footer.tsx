@@ -1,4 +1,4 @@
-import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import { Heart } from 'lucide-react';
 
 export default function Footer() {
@@ -17,19 +17,19 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-indian-blue">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#features" className="text-gray-800 hover:text-indian-saffron transition-colors">
-                  Features
-                </a>
+                <HashLink smooth  to="#home" className="text-gray-800 hover:text-indian-saffron transition-colors">
+                  Home
+                </HashLink>
               </li>
               <li>
-                <a href="#how-it-works" className="text-gray-800 hover:text-indian-saffron transition-colors">
+                <HashLink smooth to="#how-it-works" className="text-gray-800 hover:text-indian-saffron transition-colors">
                   How It Works
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a href="#analytics" className="text-gray-800 hover:text-indian-saffron transition-colors">
+                <HashLink smooth  to="#analytics" className="text-gray-800 hover:text-indian-saffron transition-colors">
                   Analytics
-                </a>
+                </HashLink>
               </li>
             </ul>
           </div>
