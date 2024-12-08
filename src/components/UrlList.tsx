@@ -36,7 +36,7 @@ export default function UrlList() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-white rounded-lg shadow-sm p-4 mb-4"
+            className="bg-white rounded-lg shadow-md p-4 mb-4"
           >
             <div className="flex items-center justify-between">
               <div className="flex-1 min-w-0">

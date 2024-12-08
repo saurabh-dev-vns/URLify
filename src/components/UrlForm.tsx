@@ -44,9 +44,9 @@ export default function UrlForm() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="w-full max-w-2xl mx-auto"
+      className="w-full max-w-2xl mx-auto "
     >
-      <form onSubmit={handleSubmit} className="relative">
+      <form onSubmit={handleSubmit} className="relative ">
         <div className="flex items-center">
           <div className="absolute left-4">
             <Link2 className="h-5 w-5 text-indian-saffron" />
@@ -56,7 +56,7 @@ export default function UrlForm() {
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             placeholder="Enter your long URL here..."
-            className="w-full px-12 py-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-sm focus:ring-2 focus:ring-indian-saffron focus:outline-none"
+            className="w-full px-12 py-4 bg-white/90 backdrop-blur-sm rounded-lg shadow-md focus:ring-2 focus:ring-indian-saffron focus:outline-none"
           />
           <button
             type="submit"

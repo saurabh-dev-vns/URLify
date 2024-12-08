@@ -1,4 +1,3 @@
-import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,7 +10,7 @@ import HowItWorks from './components/HowItWorks';
 export default function App() {
   return (
     <HelmetProvider>
-      <div className="min-h-screen flex flex-col bg-gradient-to-b from-indian-saffron via-white to-indian-green">
+      <div className="min-h-screen flex flex-col bg-gray-100">
         <SEOHead />
         <Header />
         

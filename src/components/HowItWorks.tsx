@@ -42,13 +42,13 @@ export default function HowItWorks() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
-              className="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-sm"
+              className="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-md"
             >
               <div className="bg-indian-saffron/10 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <step.icon className="h-6 w-6 text-indian-saffron" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-indian-blue">{step.title}</h3>
-              <p className="text-gray-800">{step.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-indian-blue text-center">{step.title}</h3>
+              <p className="text-gray-800 text-center">{step.description}</p>
             </motion.div>
           ))}
         </div>

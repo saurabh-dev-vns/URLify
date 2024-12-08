@@ -19,7 +19,7 @@ export default function Analytics() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full max-w-2xl mx-auto mt-12 bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-sm"
+      className="w-full max-w-2xl mx-auto mt-12 bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-md"
     >
       <h2 className="text-xl font-semibold mb-4 text-indian-blue">Click Analytics</h2>
       <div className="h-64">
