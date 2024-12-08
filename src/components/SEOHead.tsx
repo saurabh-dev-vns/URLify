@@ -9,7 +9,7 @@ interface SEOHeadProps {
 export default function SEOHead({
   title = 'URLify - Modern URL Shortener',
   description = 'Transform your long URLs into short, trackable links. Free URL shortener with analytics and custom links.',
-  canonical = 'https://urlify.com'
+  canonical = 'https://urlify1.netlify.app/'
 }: SEOHeadProps) {
   return (
     <Helmet>
