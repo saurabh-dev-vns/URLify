@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 import { motion } from 'framer-motion';
 import { Link2, Loader2 } from 'lucide-react';
-import { saveUrl } from '../utils/storage';
+import { saveUrl, getUrls } from '../utils/storage';
 import { UrlData } from '../types/url';
 
 export default function UrlForm() {
@@ -13,16 +13,26 @@ export default function UrlForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    
+
     if (!url) {
       setError('Please enter a URL');
+      return;
+    }
+
+    if (url.startsWith(`${window.location.origin}`)) {
+      setError("Try different URL.");
+      return;
+    }
+
+    if (getUrls().find((u) => u.originalUrl === url)) {
+      setError("URL already exists");
       return;
     }
 
     try {
       setIsLoading(true);
       const urlObject = new URL(url);
-      
+
       const shortUrl: UrlData = {
         id: nanoid(8),
         originalUrl: urlObject.toString(),
