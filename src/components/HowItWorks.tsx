@@ -29,8 +29,8 @@ export default function HowItWorks() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-indian-blue mb-4">How It Works</h2>
-          <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-indian-blue mb-4 dark:text-blue-200">How It Works</h2>
+          <p className="text-lg text-gray-800 dark:text-white max-w-2xl mx-auto">
             Three simple steps to transform your long URLs into short, trackable links
           </p>
         </motion.div>
@@ -42,13 +42,13 @@ export default function HowItWorks() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
-              className="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-md"
+              className="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-md dark:bg-gray-700 "
             >
               <div className="bg-indian-saffron/10 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <step.icon className="h-6 w-6 text-indian-saffron" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-indian-blue text-center">{step.title}</h3>
-              <p className="text-gray-800 text-center">{step.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-indian-blue dark:text-blue-200 text-center">{step.title}</h3>
+              <p className="text-gray-800 text-center dark:text-white">{step.description}</p>
             </motion.div>
           ))}
         </div>
