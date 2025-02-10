@@ -18,7 +18,7 @@ export default function UrlList() {
 
   const handleCopy = async (shortUrl: string, id: string) => {
     await navigator.clipboard.writeText(
-      `${window.location.origin}/${shortUrl}`
+      `${window.location.origin}/#/${shortUrl}`
     );
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2000);
