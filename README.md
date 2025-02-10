@@ -24,22 +24,25 @@ Check out a live demo of the project [here](https://urlify1.netlify.app/).
 ## Installation
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/react-url-shortener.git
-   cd react-url-shortener
-   ```
+
+    ```bash
+    git clone https://github.com/yourusername/react-url-shortener.git
+    cd react-url-shortener
+    ```
 
 2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+
+    ```bash
+    npm install
+    ```
 
 3. **Start the development server**:
-   ```bash
-   npm start
-   ```
 
-   The app will be available at `http://localhost:3000`.
+    ```bash
+    npm start
+    ```
+
+    The app will be available at `http://localhost:3000`.
 
 ---
 
@@ -56,23 +59,25 @@ Check out a live demo of the project [here](https://urlify1.netlify.app/).
 
 - **Home**: Transform URLs and view analytics.
 - **Sections**:
-  - `Hero Section`: Introductory content and URL shortener form.
-  - `URL List`: View all shortened URLs and copy links.
-  - `Analytics`: Track click counts for each link.
+    - `Hero Section`: Introductory content and URL shortener form.
+    - `URL List`: View all shortened URLs and copy links.
+    - `Analytics`: Track click counts for each link.
 
 ---
 
 ## How It Works
 
 1. **Short URL Generation**:
-   - A unique ID is generated for each original URL.
-   - The shortened URL format is: `https://urlify1.netlify.app/#/unique-id`.
+
+    - A unique ID is generated for each original URL.
+    - The shortened URL format is: `https://urlify1.netlify.app/#/unique-id`.
 
 2. **Redirection**:
-   - When a shortened URL is visited, the app fetches the original URL from `localStorage` and redirects.
+
+    - When a shortened URL is visited, the app fetches the original URL from `localStorage` and redirects.
 
 3. **Smooth Scrolling**:
-   - The app uses `react-router-hash-link` for smooth navigation between sections.
+    - The app uses `react-router-hash-link` for smooth navigation between sections.
 
 ---
 
@@ -126,17 +131,17 @@ Contributions are welcome! If you'd like to improve this project:
 
 1. Fork the repository.
 2. Create a new branch:
-   ```bash
-   git checkout -b feature-name
-   ```
+    ```bash
+    git checkout -b feature-name
+    ```
 3. Make your changes and commit them:
-   ```bash
-   git commit -m "Add feature name"
-   ```
+    ```bash
+    git commit -m "Add feature name"
+    ```
 4. Push to your fork:
-   ```bash
-   git push origin feature-name
-   ```
+    ```bash
+    git push origin feature-name
+    ```
 5. Submit a pull request.
 
 ---

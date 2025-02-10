@@ -1,7 +1,7 @@
 export interface UrlData {
-  id: string;
-  originalUrl: string;
-  shortUrl: string;
-  createdAt: Date;
-  clicks: number;
+	id: string;
+	originalUrl: string;
+	shortUrl: string;
+	createdAt: Date;
+	clicks: number;
 }
