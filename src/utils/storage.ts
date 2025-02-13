@@ -18,3 +18,9 @@ export const incrementClicks = (id: string): void => {
   );
   localStorage.setItem('shortUrls', JSON.stringify(updatedUrls));
 };
+
+export const deleteUrl = (id: string): void => {
+  const urls = getUrls();
+  const updatedUrls = urls.filter((url) => url.id !== id);
+  localStorage.setItem('shortUrls', JSON.stringify(updatedUrls));
+}
