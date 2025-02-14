@@ -1,5 +1,6 @@
 import { HashLink } from 'react-router-hash-link';
 import { Heart } from 'lucide-react';
+import {Link} from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -36,7 +37,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-indian-blue dark:text-blue-200">Contact</h3>
             <p className="text-gray-800 dark:text-white">
-              Have questions? Reach out to us at support@urlify.com
+              Have questions? Reach out to us at{' '}
+              <Link
+                to="/contact"
+                className="hover:text-indian-saffron transition-colors"
+              >
+                support@urlify.com
+              </Link>
             </p>
           </div>
         </div>
