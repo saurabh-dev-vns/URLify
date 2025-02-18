@@ -9,6 +9,7 @@ import Analytics from './components/Analytics';
 import HowItWorks from './components/HowItWorks';
 import RedirectPage from './components/RedirectPage';
 import DarkMode from './components/DarkMode';
+import Contact from './components/Contact';
 
 export default function App() {
   return (
@@ -59,6 +60,7 @@ export default function App() {
                 }
               />
               {/* Redirect Route for Shortened URLs */}
+              <Route path='/contact' element={<Contact/>} />
               <Route path="/:shortUrl" element={<RedirectPage />} />
             </Routes>
           </main>
