@@ -10,6 +10,7 @@ import HowItWorks from './components/HowItWorks';
 import RedirectPage from './components/RedirectPage';
 import DarkMode from './components/DarkMode';
 import Contact from './components/Contact';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 export default function App() {
   return (
@@ -65,6 +66,7 @@ export default function App() {
             </Routes>
           </main>
           <Footer />
+          <ScrollToTopButton/>
         </div>
       </Router>
     </HelmetProvider>
