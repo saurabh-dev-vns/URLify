@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 const ScrollToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-
-  // shows button when page is scrolled down
+  const [isHovered, setIsHovered] = useState(false); 
+// shows the button only when scrolled down
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
+        setIsHovered(false);
       }
     };
     window.addEventListener('scroll', toggleVisibility);
@@ -28,36 +29,41 @@ const ScrollToTopButton: React.FC = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          //styles for the button
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
           style={{
             position: 'fixed',
-            bottom:'40px',
+            bottom: '40px',
             right: '20px',
-            padding: '10px 20px',
-            fontSize: '16px',
-            fontWeight: 'bold',
-            backgroundColor: '#007bff',
-            color: '#fff',
+            padding: '15px',
+            fontSize: '18px',
+            background: 'linear-gradient(135deg, #ff7eb9, #ff758c, #fd5e53, #fc4a1a)',
+            color: '#ffffff',
             border: 'none',
-            borderRadius: '50px',
+            borderRadius: '50%',
             cursor: 'pointer',
-            boxShadow: '0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6)',
-            transition: 'box-shadow 0.3s ease, transform 0.2s ease',
-            zIndex: '1000'
-          }
-        }
-        onMouseEnter={(e) => {
-          (e.target as HTMLButtonElement).style.boxShadow =
-            '0 0 20px rgba(0, 123, 255, 1), 0 0 40px rgba(0, 123, 255, 0.8)';
-          (e.target as HTMLButtonElement).style.transform = 'scale(1.1)';
-        }}
-        onMouseLeave={(e) => {
-          (e.target as HTMLButtonElement).style.boxShadow =
-            '0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6)';
-          (e.target as HTMLButtonElement).style.transform = 'scale(1)';
-        }}
+            boxShadow: isHovered
+              ? '0 0 30px rgba(255, 118, 133, 1), 0 0 60px rgba(255, 118, 133, 0.9)'
+              : '0 0 20px rgba(255, 118, 133, 0.8), 0 0 40px rgba(255, 118, 133, 0.6)',
+            transform: isHovered ? 'scale(1.2)' : 'scale(1)',
+            animation: 'glow 2s infinite alternate',
+            transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+            zIndex: '1000',
+          }}
         >
-          ⮝
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
         </button>
       )}
     </div>
