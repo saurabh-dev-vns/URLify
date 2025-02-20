@@ -18,17 +18,17 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-indian-blue dark:text-blue-200">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <HashLink smooth  to="#home" className="text-gray-800 dark:text-white hover:text-indian-saffron transition-colors">
+                <HashLink smooth  to="#home" className="text-gray-800 dark:text-white dark:hover:text-indian-saffron hover:text-indian-saffron transition-colors">
                   Home
                 </HashLink>
               </li>
               <li>
-                <HashLink smooth to="#how-it-works" className="text-gray-800 dark:text-white hover:text-indian-saffron transition-colors">
+                <HashLink smooth to="#how-it-works" className="text-gray-800 dark:text-white dark:hover:text-indian-saffron hover:text-indian-saffron transition-colors">
                   How It Works
                 </HashLink>
               </li>
               <li>
-                <HashLink smooth  to="#analytics" className="text-gray-800 dark:text-white hover:text-indian-saffron transition-colors">
+                <HashLink smooth  to="#analytics" className="text-gray-800 dark:text-white dark:hover:text-indian-saffron hover:text-indian-saffron transition-colors">
                   Analytics
                 </HashLink>
               </li>
