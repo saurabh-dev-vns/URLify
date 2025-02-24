@@ -11,7 +11,7 @@ import RedirectPage from './components/RedirectPage';
 import DarkMode from './components/DarkMode';
 import Contact from './components/Contact';
 import ScrollToTopButton from './components/ScrollToTopButton';
-
+import FAQ from './components/FAQ';
 export default function App() {
   return (
     <HelmetProvider>
@@ -57,6 +57,7 @@ export default function App() {
                     </section>
 
                     <HowItWorks />
+                    <FAQ/>
                   </>
                 }
               />
