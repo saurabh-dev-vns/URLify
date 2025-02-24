@@ -52,7 +52,7 @@ const FAQ: React.FC = () => {
         {
             title: 'What is this website?',
             content:
-                'This is a URL shortener that helps you create short, easy-to-share links from long URLs.'
+                'This is a URL shortener that helps you to create short, easy-to-share links from long URLs.'
         },
         {
             title: 'How does the Shortner URL shortener work?',
