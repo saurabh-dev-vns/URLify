@@ -52,7 +52,7 @@ const FAQ: React.FC = () => {
         {
             title: 'What is this website?',
             content:
-                'This is a URL shortener that helps you to create short, easy-to-share links from long URLs.'
+                'This is a URL shortener that helps you create short, easy-to-share links from long URLs.'
         },
         {
             title: 'How does the Shortner URL shortener work?',
@@ -60,7 +60,7 @@ const FAQ: React.FC = () => {
                 'When you enter a long URL, our system generates a shorter version of that URL. This shortened URL redirects to the original long URL when accessed.',
         },
         {
-            title: ' Is this service free?',
+            title: 'Is this service free?',
             content:
                 'Yes, the basic URL shortening service is free. However, we may offer premium features for advanced analytics, custom branding, and more.'
         },
