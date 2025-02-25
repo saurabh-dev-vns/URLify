@@ -31,7 +31,7 @@ export default function Footer() {
                 <HashLink smooth  to="#analytics" className="text-gray-800 dark:text-white dark:hover:text-indian-saffron hover:text-indian-saffron transition-colors">
                   Analytics
                 </HashLink>
-              </li>
+              </li> 
             </ul>
           </div>
           <div>
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-indian-saffron/20 text-center text-gray-800">
-          <p className="flex items-center justify-center">
+          <p className="text-black dark:text-indian-saffron flex items-center justify-center">
             Made with <Heart className="h-4 w-4 mx-1 text-indian-green" /> by URLify Team
           </p>
         </div>
